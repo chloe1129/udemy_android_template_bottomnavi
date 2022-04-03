@@ -105,7 +105,8 @@
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf= "parent"
         app:menu="@menu/bottom_nav_menu" />
+    //메뉴 속성은 소스 파일 menu에 파일을 따로 만들어준다
 
 </androidx.constraintlayout.widget.ConstraintLayout>
