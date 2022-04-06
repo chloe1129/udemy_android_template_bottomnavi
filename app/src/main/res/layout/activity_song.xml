@@ -151,11 +151,11 @@
     </LinearLayout>
 
     <SeekBar
-        android:id="@+id/song_seek_bar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:id="@+id/song_progress_sb"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginTop="50dp"
         android:maxHeight="4dp"
         android:minHeight="4dp"
@@ -163,19 +163,22 @@
         android:paddingEnd="0dp"
         android:background="@null"
         android:progress="0"
+        android:progressBackgroundTint="@color/song_player_bg"
+        android:progressTint="@color/song_player"
+        android:max="100000"
         android:thumb="@color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/song_like_horizontal"/>
 
     <TextView
-        android:id="@+id/song_time"
+        android:id="@+id/song_start_time_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00:00"
         android:textColor="@color/select_color"
-        app:layout_constraintStart_toStartOf="@+id/song_seek_bar"
-        app:layout_constraintTop_toBottomOf="@+id/song_seek_bar" />
+        app:layout_constraintStart_toStartOf="@+id/song_progress_sb"
+        app:layout_constraintTop_toBottomOf="@+id/song_progress_sb" />
 
     <TextView
         android:id="@+id/song_end_time_tv"
@@ -183,8 +186,8 @@
         android:layout_height="wrap_content"
         android:text="01:00"
         android:textColor="@color/gray_color"
-        app:layout_constraintEnd_toEndOf="@+id/song_seek_bar"
-        app:layout_constraintTop_toBottomOf="@+id/song_seek_bar" />
+        app:layout_constraintEnd_toEndOf="@+id/song_progress_sb"
+        app:layout_constraintTop_toBottomOf="@+id/song_progress_sb" />
 
     <LinearLayout
         android:id="@+id/song_player_layout"
@@ -194,7 +197,7 @@
         app:layout_constraintBottom_toTopOf="@+id/song_related"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/song_seek_bar">
+        app:layout_constraintTop_toBottomOf="@+id/song_progress_sb">
 
         <ImageView
             android:id="@+id/song_previous_iv"
