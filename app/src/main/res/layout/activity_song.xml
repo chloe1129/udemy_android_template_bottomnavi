@@ -96,6 +96,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
         <ImageView
+            android:id="@+id/song_album_iv"
             android:layout_width="270dp"
             android:layout_height="270dp"
             android:src="@drawable/img_album_exp2" />
@@ -126,26 +127,24 @@
         app:layout_constraintTop_toBottomOf="@id/song_lyrics_01"/>
 
     <LinearLayout
-        android:id="@+id/song_like_horizontal"
+        android:id="@+id/song_like_iv_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="@+id/song_picture_ib"
         app:layout_constraintStart_toStartOf="@+id/song_picture_ib"
         app:layout_constraintTop_toBottomOf="@+id/song_lyrics_02">
 
         <ImageView
-            android:id="@+id/song_lick_ib"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:id="@+id/song_like_iv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:src="@drawable/ic_my_like_off" />
 
         <ImageView
-            android:id="@+id/song_unlick_ib"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:scaleType="fitXY"
+            android:id="@+id/song_unlike_iv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_marginStart="50dp"
             android:src="@drawable/btn_player_unlike_off" />
     </LinearLayout>
@@ -169,7 +168,7 @@
         android:thumb="@color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/song_like_horizontal"/>
+        app:layout_constraintTop_toBottomOf="@id/song_like_iv_layout"/>
 
     <TextView
         android:id="@+id/song_start_time_tv"

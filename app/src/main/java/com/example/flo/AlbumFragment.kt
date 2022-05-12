@@ -34,7 +34,9 @@ class AlbumFragment : Fragment() {
                 .replace(R.id.main_frm, HomeFragment())
                 .commitAllowingStateLoss()
         }
+
         val albumAdapter = AlbumVPAdapter(this)
+
         binding.albumContentVp.adapter = albumAdapter
         TabLayoutMediator(binding.albumContentTb, binding.albumContentVp){
                 tab, position ->
@@ -44,7 +46,7 @@ class AlbumFragment : Fragment() {
     }
 
     private fun setInit(album: Album) {
-        //binding.albumAlbumIv.setImageResource(album.coverImg!!)
+        binding.albumAlbumIv.setImageResource(album.coverImg!!)
         binding.albumMusicTitleTv.text = album.title.toString()
         binding.albumSingerNameTv.text = album.singer.toString()
     }
